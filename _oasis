@@ -10,7 +10,7 @@ Library Mecab
   BuildTools: ocamlbuild
   Modules:    Mecab
   CSources:
-    mecab-ffi.c
+    mecab_stubs.c
   CCOpt:
   CCLib:
     -lmecab -lstdc++

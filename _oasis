@@ -1,0 +1,19 @@
+OASISFormat: 0.2
+Name:        mecab
+Version:     0.1
+Synopsis:    binding of mecab
+Authors:     taks
+License:     MIT
+
+Library Mecab
+  Path:       lib
+  BuildTools: ocamlbuild
+  Modules:    Mecab
+  CSources:
+    mecab-ffi.c
+  CCOpt:
+  CCLib:
+    -lmecab -lstdc++
+
+
+

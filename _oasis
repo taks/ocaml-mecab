@@ -12,8 +12,7 @@ Library Mecab
   CSources:
     mecab_stubs.c
   CCOpt:
-  CCLib:
-    -lmecab -lstdc++
-
-
-
+  if system(macosx)
+    CCLib: -L/usr/local/lib -lmecab
+  else
+    CCLib: -mecab

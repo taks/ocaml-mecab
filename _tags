@@ -1,0 +1,11 @@
+# OASIS_START
+# DO NOT EDIT (digest: 6f6e10e64ef9a219aa58636fd67b3bc5)
+# Library Mecab
+"lib": include
+<lib/Mecab.{cma,cmxa}>: oasis_library_mecab_cclib
+"lib/libMecab.lib": oasis_library_mecab_cclib
+"lib/dllMecab.dll": oasis_library_mecab_cclib
+"lib/libMecab.a": oasis_library_mecab_cclib
+"lib/dllMecab.so": oasis_library_mecab_cclib
+<lib/Mecab.{cma,cmxa}>: use_libMecab
+# OASIS_STOP

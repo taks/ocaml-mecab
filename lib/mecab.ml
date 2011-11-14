@@ -1,6 +1,6 @@
 
 type t
-external new_mecab2 : string -> t = "ocaml_mecab_new2"
+external init : string -> t = "ocaml_mecab_new2"
 external version : unit -> string = "ocaml_mecab_version"
 external sparse_tostr : t -> string -> string = "ocaml_mecab_sparse_tostr"
 external sparse_tostr2 : t -> string -> int -> string = "ocaml_mecab_sparse_tostr2"

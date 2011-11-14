@@ -15,4 +15,4 @@ Library Mecab
   if system(macosx)
     CCLib: -L/usr/local/lib -lmecab
   else
-    CCLib: -mecab
+    CCLib: -lmecab

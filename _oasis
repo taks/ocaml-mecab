@@ -5,6 +5,8 @@ Synopsis:    binding of mecab
 Authors:     taks
 License:     MIT
 
+Plugins: META (0.2)
+
 Library Mecab
   Path:       lib
   BuildTools: ocamlbuild

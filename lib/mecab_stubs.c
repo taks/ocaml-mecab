@@ -28,11 +28,11 @@ static inline value copy_mecab_t(mecab_t *mecab) {
 }
 
 CAMLprim value
-ocaml_mecab_new2( value str ) {
-    CAMLparam1(str);
+ocaml_mecab_new2( value str_v ) {
+    CAMLparam1(str_v);
     CAMLlocal1(mecab_v);
 
-    mecab_t *mecab = mecab_new2(String_val(str));
+    mecab_t *mecab = mecab_new2(String_val(str_v));
     if(!mecab) {
         const char *err_str = mecab_strerror(mecab);
         mecab_destroy(mecab);
@@ -55,12 +55,12 @@ ocaml_mecab_version( value unit ) {
 }
 
 CAMLprim value
-ocaml_mecab_sparse_tostr( value mecab_v, value input_str ) {
-    CAMLparam2(mecab_v, input_str);
+ocaml_mecab_sparse_tostr( value mecab_v, value str_v) {
+    CAMLparam2(mecab_v, str_v);
 
     mecab_t *mecab = Mecab_val(mecab_v);
 
-    const char *result = mecab_sparse_tostr(mecab, String_val(input_str));
+    const char *result = mecab_sparse_tostr(mecab, String_val(str_v));
 
     if(!result) {
         const char *err_str = mecab_strerror(mecab);

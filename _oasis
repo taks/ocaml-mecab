@@ -7,7 +7,7 @@ License:     MIT
 
 Plugins: META (0.2)
 
-Library Mecab
+Library mecab
   Path:       lib
   BuildTools: ocamlbuild
   Modules:    Mecab

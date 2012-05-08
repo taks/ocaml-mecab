@@ -1,0 +1,9 @@
+# OASIS_START
+# DO NOT EDIT (digest: ba566ec78de3ae62fad9f07f6bceb430)
+version = "0.1"
+description = "binding of mecab"
+archive(byte) = "mecab.cma"
+archive(native) = "mecab.cmxa"
+exists_if = "mecab.cma"
+# OASIS_STOP
+

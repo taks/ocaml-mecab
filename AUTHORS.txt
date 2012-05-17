@@ -1,0 +1,5 @@
+(* OASIS_START *)
+(* DO NOT EDIT (digest: d9769181f0551e65ed945f9778dfd3d1) *)
+Authors of mecab
+taks
+(* OASIS_STOP *)

@@ -45,7 +45,8 @@ static struct custom_operations mecab_t_ops = {
  deserialize: custom_deserialize_default
 };
 
-static inline value copy_mecab_t(mecab_t *mecab) {
+static inline
+value copy_mecab_t(mecab_t *mecab) {
     CAMLparam0();
     CAMLlocal1(mecab_v);
 
@@ -280,7 +281,8 @@ ocaml_mecab_sparse_tonode2( value mecab_v, value str_v, value len_v ) {
     CAMLreturn(copy_mecab_node_t(node));
 }
 
-static inline value ocaml_dict( const mecab_dictionary_info_t *dict ) {
+static inline value
+ocaml_dict( const mecab_dictionary_info_t *dict ) {
     CAMLparam0();
     CAMLlocal1(result);
 

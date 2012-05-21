@@ -230,7 +230,7 @@ set_next_node( value node_v, value next_node_v ) {
 }
 
 static value
-copy_mecab_node_t( mecab_node_t *node ) {
+copy_mecab_node_t( const mecab_node_t *node ) {
   CAMLparam0();
   CAMLlocal3(prev_node_v, node_v, start_node_v);
 

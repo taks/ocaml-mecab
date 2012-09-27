@@ -1,4 +1,5 @@
-open OUnit;;
+open OUnit
+open BatPervasives
 
 let test_wakati () =
   let m = Mecab.init "-O wakati" in
@@ -6,9 +7,10 @@ let test_wakati () =
 
 let test_node () =
   let m = Mecab.init "" in
-  let list = Mecab.lazy_list_of_node m "今日もしないとね" in
-  let surface_list = BatLazyList.to_list (BatLazyList.map (fun n -> n.Mecab.surface) list) in
-  assert_equal ["今日"; "も"; "し"; "ない"; "と"; "ね"; ""] surface_list ;;
+  Mecab.lazy_list_of_node m "今日もしないとね"
+  |> BatLazyList.map (fun n -> n.Mecab.surface)
+  |> BatLazyList.to_list
+  |> assert_equal ["今日"; "も"; "し"; "ない"; "と"; "ね"; ""] ;;
 
 let suite =
   "suite">:::

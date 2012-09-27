@@ -1,5 +1,5 @@
 (* OASIS_START *)
-(* DO NOT EDIT (digest: 85656f6ebf30cd83bde5550f1b3d9375) *)
+(* DO NOT EDIT (digest: 73ae1dfb49f547ecb356dfd0bcca82bc) *)
 This is the INSTALL file for the mecab distribution.
 
 This package uses OASIS to generate its build system. See section OASIS for
@@ -9,8 +9,9 @@ Dependencies
 ============
 
 In order to compile this package, you will need:
-* ocaml
+* ocaml for all, test test
 * findlib
+* oUnit for executable test
 
 Installing
 ==========

@@ -1,17 +1,14 @@
-OASISFormat: 0.2
+OASISFormat: 0.3
 Name:        mecab
 Version:     0.1
 Synopsis:    binding of mecab
 Authors:     taks
 License:     MIT
-
-Plugins: META (0.3),
-         StdFiles (0.3),
-         DevFiles (0.3)
+Plugins: META (0.3), StdFiles (0.3), DevFiles (0.3)
+BuildTools: ocamlbuild
 
 Library mecab
   Path:       lib
-  BuildTools: ocamlbuild
   Modules:    Mecab
   CSources:
     mecab_stubs.c
@@ -20,3 +17,12 @@ Library mecab
     CCLib: -L/usr/local/lib -lmecab
   else
     CCLib: -lmecab
+
+Executable test
+  Path: test
+  MainIs: test.ml
+  Install: false
+  BuildDepends: mecab, oUnit
+
+Test test
+  Command: $test

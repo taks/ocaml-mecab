@@ -9,6 +9,7 @@ BuildTools: ocamlbuild
 
 Library mecab
   Path:       lib
+  BuildDepends: batteries
   Modules:    Mecab
   CSources:
     mecab_stubs.c

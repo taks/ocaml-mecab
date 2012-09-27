@@ -1,7 +1,8 @@
 # OASIS_START
-# DO NOT EDIT (digest: 822efc11331e201d6c028a8cf6a78450)
+# DO NOT EDIT (digest: 2c55ed5addc3ff7b78e07721114e0404)
 version = "0.1"
 description = "binding of mecab"
+requires = "batteries"
 archive(byte) = "mecab.cma"
 archive(byte, plugin) = "mecab.cma"
 archive(native) = "mecab.cmxa"

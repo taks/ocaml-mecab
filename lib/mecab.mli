@@ -32,7 +32,7 @@ type node = {
 external sparse_tonode : t -> string -> node = "ocaml_mecab_sparse_tonode"
 external sparse_tonode2 : t -> string -> int -> node = "ocaml_mecab_sparse_tonode2"
 
-val each_node : node -> (node -> unit) -> unit
+val lazy_list_of_node : t -> string -> node BatLazyList.t
 
 (*** 辞書関連 ***)
 type dic_type =

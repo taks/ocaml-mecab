@@ -33,12 +33,13 @@ type node = {
 external sparse_tonode : t -> string -> node = "ocaml_mecab_sparse_tonode"
 external sparse_tonode2 : t -> string -> int -> node = "ocaml_mecab_sparse_tonode2"
 
-let rec each_node node f =
-  f node;
-  match node.next with
-    | None -> ();
-    | Some(next_node) -> each_node next_node f;
-;;
+let lazy_list_of_node mecab str =
+  BatLazyList.unfold
+    (sparse_tonode mecab str)
+    (fun n -> match n.next with
+      | None -> None;
+      | Some(next_node) ->
+          Some(next_node, next_node));;
 
 (*** 辞書関連 ***)
 type dic_type =
